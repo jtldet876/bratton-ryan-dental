@@ -34,7 +34,7 @@ export default function Hero() {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 h-full flex flex-col justify-center pt-20"
+        className="relative z-10 h-full flex flex-col justify-start pt-28 sm:pt-32 lg:justify-center lg:pt-20"
         style={{ opacity }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full">
