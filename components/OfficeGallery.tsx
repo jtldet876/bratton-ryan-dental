@@ -97,7 +97,7 @@ export default function OfficeGallery() {
                 difference — warm, modern, and completely at ease.&rdquo;
               </p>
               <div>
-                <p className="text-gold text-sm font-medium">Dr. Roy Bratton</p>
+                <p className="text-gold text-sm font-medium">Dr. Ryan Bratton</p>
                 <p className="text-white/40 text-xs tracking-widest uppercase mt-1">
                   Lead Dentist
                 </p>

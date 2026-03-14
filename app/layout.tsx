@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "fear-free dentist Scottsdale",
     "best dentist Scottsdale",
     "Bratton Ryan Dentistry",
-    "Dr Roy Bratton",
+    "Dr Ryan Bratton",
     "dental care 85258",
     "dental office Scottsdale",
     "smile makeover Scottsdale",

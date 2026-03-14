@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const team = [
   {
-    name: "Dr. Roy Bratton",
+    name: "Dr. Ryan Bratton",
     role: "Lead Dentist & Founder",
     image: "/images/DrBratton.jpg",
     bio: "With over 25 years of experience, Dr. Bratton brings unmatched expertise and a genuine passion for transforming smiles. His philosophy: exceptional care, every single time.",
