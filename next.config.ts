@@ -21,6 +21,15 @@ const nextConfig: NextConfig = {
       { source: "/patient-resources/faqs", destination: "/patient-resources", permanent: true },
       { source: "/patient-resources/links", destination: "/patient-resources", permanent: true },
       { source: "/appointments", destination: "/contact", permanent: true },
+      { source: "/appointment-request-2", destination: "/contact", permanent: true },
+      { source: "/welcome/happy-clients", destination: "/#testimonials", permanent: true },
+      { source: "/smile-gallery/cosmetic-dentistry", destination: "/smile-gallery", permanent: true },
+      { source: "/smile-gallery/cosmetic-dentistry/:procedure", destination: "/smile-gallery", permanent: true },
+      { source: "/smile-gallery/other-procedures", destination: "/smile-gallery", permanent: true },
+      { source: "/smile-gallery/other-procedures/:procedure", destination: "/smile-gallery", permanent: true },
+      { source: "/dental-videos/conditions", destination: "/dental-videos", permanent: true },
+      { source: "/dental-videos/home-care", destination: "/dental-videos", permanent: true },
+      { source: "/dental-videos/procedures", destination: "/dental-videos", permanent: true },
     ];
   },
 };
