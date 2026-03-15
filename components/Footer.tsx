@@ -2,6 +2,22 @@
 
 import Link from "next/link";
 
+const serviceLinks = [
+  { label: "Cleanings & Prevention", href: "/our-services/cleanings-prevention" },
+  { label: "Cosmetic Dentistry", href: "/our-services/cosmetic-dentistry" },
+  { label: "Dental Implants", href: "/our-services/cosmetic-dentistry/dental-implants" },
+  { label: "Teeth Whitening", href: "/our-services/cosmetic-dentistry/opalescence-teeth-whitening" },
+  { label: "Orthodontics / Invisalign", href: "/our-services/orthodontics" },
+];
+
+const practiceLinks = [
+  { label: "Meet the Team", href: "/#team" },
+  { label: "Our Process", href: "/#process" },
+  { label: "Patient Reviews", href: "/#testimonials" },
+  { label: "Patient Resources", href: "/patient-resources" },
+  { label: "Insurance & Financing", href: "/patient-resources/financing" },
+];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -11,14 +27,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="mb-4">
+            <Link href="/" className="inline-block mb-4">
               <span className="font-serif text-lg text-white tracking-wide leading-tight block">
                 Bratton Ryan
               </span>
               <span className="text-[10px] text-gold tracking-[0.25em] uppercase font-light block">
                 Dentistry
               </span>
-            </div>
+            </Link>
             <p className="text-white/40 text-sm leading-relaxed font-light">
               Outstanding dental care. No exceptions.
             </p>
@@ -30,18 +46,16 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-3">
-              {["Preventive Care", "Cosmetic Dentistry", "Dental Implants", "Teeth Whitening", "Emergency Dental"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      href="#services"
-                      className="text-white/40 hover:text-gold text-sm transition-colors duration-300 font-light"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )}
+              {serviceLinks.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-white/40 hover:text-gold text-sm transition-colors duration-300 font-light"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -51,18 +65,16 @@ export default function Footer() {
               Practice
             </h4>
             <ul className="space-y-3">
-              {["Meet the Team", "Our Process", "Patient Reviews", "New Patients", "Insurance"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="text-white/40 hover:text-gold text-sm transition-colors duration-300 font-light"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                )
-              )}
+              {practiceLinks.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-white/40 hover:text-gold text-sm transition-colors duration-300 font-light"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -111,15 +123,15 @@ export default function Footer() {
             © {currentYear} Bratton Ryan Dentistry. All rights reserved.
           </p>
           <div className="flex gap-6">
-            {["Privacy Policy", "Terms of Use", "Accessibility"].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="text-white/20 hover:text-gold/60 text-xs transition-colors duration-300"
-              >
-                {item}
-              </Link>
-            ))}
+            <Link href="/disclosures" className="text-white/20 hover:text-gold/60 text-xs transition-colors duration-300">
+              Disclosures
+            </Link>
+            <Link href="/patient-resources" className="text-white/20 hover:text-gold/60 text-xs transition-colors duration-300">
+              Patient Resources
+            </Link>
+            <Link href="/contact" className="text-white/20 hover:text-gold/60 text-xs transition-colors duration-300">
+              Contact
+            </Link>
           </div>
         </div>
       </div>
