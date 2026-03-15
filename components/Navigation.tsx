@@ -15,10 +15,11 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "Our Process", href: "#process" },
-    { label: "Our Team", href: "#team" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Services", href: "/our-services" },
+    { label: "Smile Gallery", href: "/smile-gallery" },
+    { label: "Our Team", href: "/#team" },
+    { label: "Patient Resources", href: "/patient-resources" },
+    { label: "Blog", href: "/blog" },
   ];
 
   return (
@@ -59,7 +60,7 @@ export default function Navigation() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/contact"
                 className="ml-4 px-6 py-2.5 border border-gold text-gold hover:bg-gold hover:text-navy text-sm tracking-widest uppercase font-medium transition-all duration-300"
               >
                 Schedule
@@ -116,7 +117,7 @@ export default function Navigation() {
               </motion.a>
             ))}
             <motion.a
-              href="#contact"
+              href="/contact"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}

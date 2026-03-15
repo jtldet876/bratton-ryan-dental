@@ -73,15 +73,15 @@ export default function Footer() {
             </h4>
             <address className="not-italic space-y-3">
               <p className="text-white/40 text-sm font-light leading-relaxed">
-                7702 E Doubletree Ranch Rd
+                7500 E McDonald Dr
                 <br />
-                Scottsdale, AZ 85258
+                Suite 101B, Scottsdale, AZ 85250
               </p>
               <a
-                href="tel:+14802534900"
+                href="tel:+14809984150"
                 className="text-white/40 hover:text-gold text-sm transition-colors duration-300 block font-light"
               >
-                (480) 253-4900
+                (480) 998-4150
               </a>
               <a
                 href="https://www.brattonryan.com"
@@ -97,9 +97,9 @@ export default function Footer() {
               <p className="text-white/40 text-xs leading-relaxed font-light">
                 Mon–Thu: 8:00am – 5:00pm
                 <br />
-                Friday: 8:00am – 1:00pm
+                Lunch: 1:00pm – 2:00pm
                 <br />
-                Sat–Sun: Closed
+                Fri–Sun: Closed
               </p>
             </div>
           </div>

@@ -71,7 +71,7 @@ export default function FinalCTA() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <a
-              href="tel:+14802534900"
+              href="tel:+14809984150"
               className="group inline-flex items-center gap-3 px-10 py-5 bg-gold text-navy font-semibold text-sm tracking-widest uppercase hover:bg-gold-light transition-all duration-300"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -107,7 +107,7 @@ export default function FinalCTA() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 ),
-                label: "7702 E Doubletree Ranch Rd, Scottsdale, AZ",
+                label: "7500 E McDonald Dr Suite 101B, Scottsdale, AZ 85250",
               },
               {
                 icon: (
@@ -115,7 +115,7 @@ export default function FinalCTA() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 ),
-                label: "(480) 253-4900",
+                label: "(480) 998-4150",
               },
               {
                 icon: (
@@ -123,7 +123,7 @@ export default function FinalCTA() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
-                label: "Mon–Thu 8am–5pm · Fri 8am–1pm",
+                label: "Mon–Thu 8am–5pm · Fri–Sun Closed",
               },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-white/50">

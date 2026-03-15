@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bratton Ryan Dentistry | Scottsdale AZ Dentist",
     description:
-      "Fear-free, comprehensive dental care in Scottsdale, AZ. Preventive, cosmetic & restorative dentistry. Over 25 years of trusted service. Call (480) 253-4900.",
+      "Fear-free, comprehensive dental care in Scottsdale, AZ. Preventive, cosmetic & restorative dentistry. Over 25 years of trusted service. Call (480) 998-4150.",
     type: "website",
     url: "https://www.brattonryan.com",
     siteName: "Bratton Ryan Dentistry",
@@ -93,13 +93,13 @@ export default function RootLayout({
               name: "Bratton Ryan Dentistry",
               image: "https://www.brattonryan.com/images/BrattonOffice1.webp",
               url: "https://www.brattonryan.com",
-              telephone: "+14802534900",
+              telephone: "+14809984150",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "7702 E Doubletree Ranch Rd",
+                streetAddress: "7500 E McDonald Dr Suite 101B",
                 addressLocality: "Scottsdale",
                 addressRegion: "AZ",
-                postalCode: "85258",
+                postalCode: "85250",
                 addressCountry: "US",
               },
               geo: {
