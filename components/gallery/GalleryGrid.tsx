@@ -34,14 +34,10 @@ const galleryData: GalleryCategory[] = [
     label: "Porcelain Veneers",
     description: "Ultra-thin porcelain shells that correct color, shape, and alignment in as little as two visits.",
     cases: [
-      { src: "/images/gallery/veneer-1.jpg", alt: "Porcelain veneers result", treatment: "Smile Makeover",        description: "Stunning smile transformation with eight custom porcelain veneers.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "after", aspectW: 375, aspectH: 433 },
-      { src: "/images/gallery/veneer-2.jpg", alt: "Porcelain veneers result", treatment: "Veneer Result",         description: "Dramatic improvement in color, shape, and overall smile aesthetics.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "after", aspectW: 375, aspectH: 331 },
-      { src: "/images/gallery/veneer-3.jpg", alt: "Porcelain veneers result", treatment: "Full Smile Veneers",    description: "Complete smile makeover with custom-shaded porcelain veneers.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "after", aspectW: 375, aspectH: 176 },
-      { src: "/images/gallery/veneer-4.jpg", alt: "Porcelain veneers result", treatment: "Aesthetic Veneers",     description: "Chipped and discolored teeth restored to perfect symmetry.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "after", aspectW: 375, aspectH: 196 },
-      { src: "/images/gallery/veneer-5.jpg", alt: "Porcelain veneers result", treatment: "Porcelain Veneers",     description: "Stain-resistant veneers delivering a brighter, more youthful smile.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "after", aspectW: 375, aspectH: 338 },
-      { src: "/images/gallery/veneer-6.jpg", alt: "Porcelain veneers result", treatment: "Complete Veneer Set",   description: "Full set of veneers crafted for lasting natural beauty.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "after", aspectW: 375, aspectH: 408 },
-      { src: "/images/gallery/veneer-7.jpg", alt: "Porcelain veneers result", treatment: "Smile Transformation",  description: "Gaps and uneven teeth corrected without braces.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "after", aspectW: 375, aspectH: 227 },
-      { src: "/images/gallery/veneer-8.jpg", alt: "Porcelain veneers result", treatment: "Veneer Transformation", description: "Minimal-prep veneers preserving maximum natural tooth structure.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "after", aspectW: 375, aspectH: 241 },
+      { beforeSrc: "/images/gallery/veneer-1.jpg", src: "/images/gallery/veneer-2.jpg", alt: "Porcelain veneers before and after", treatment: "Smile Makeover",     description: "Stunning smile transformation with custom porcelain veneers.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "pair", aspectW: 375, aspectH: 433 },
+      { beforeSrc: "/images/gallery/veneer-3.jpg", src: "/images/gallery/veneer-4.jpg", alt: "Porcelain veneers before and after", treatment: "Full Smile Veneers",  description: "Complete smile makeover with custom-shaded porcelain veneers.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "pair", aspectW: 375, aspectH: 196 },
+      { beforeSrc: "/images/gallery/veneer-5.jpg", src: "/images/gallery/veneer-6.jpg", alt: "Porcelain veneers before and after", treatment: "Porcelain Veneers",   description: "Stain-resistant veneers delivering a brighter, more youthful smile.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "pair", aspectW: 375, aspectH: 338 },
+      { beforeSrc: "/images/gallery/veneer-7.jpg", src: "/images/gallery/veneer-8.jpg", alt: "Porcelain veneers before and after", treatment: "Veneer Transformation", description: "Minimal-prep veneers preserving maximum natural tooth structure.", href: "/our-services/cosmetic-dentistry/porcelain-veneers", type: "pair", aspectW: 375, aspectH: 241 },
     ],
   },
   {
@@ -70,8 +66,7 @@ const galleryData: GalleryCategory[] = [
     label: "Dentures",
     description: "Precision-fit custom dentures crafted for a comfortable, natural-looking smile and restored confidence.",
     cases: [
-      { src: "/images/gallery/denture-1.jpg", alt: "Denture result", treatment: "Full Denture Restoration", description: "Complete smile restored with premium custom-fabricated dentures.", href: "/our-services/oral-maxillofacial-surgery", type: "after", aspectW: 375, aspectH: 531 },
-      { src: "/images/gallery/denture-2.jpg", alt: "Partial denture result", treatment: "Partial Denture",   description: "Natural-looking partial denture seamlessly filling missing teeth.", href: "/our-services/oral-maxillofacial-surgery", type: "after", aspectW: 375, aspectH: 528 },
+      { beforeSrc: "/images/gallery/denture-1.jpg", src: "/images/gallery/denture-2.jpg", alt: "Denture before and after", treatment: "Full Dental Restoration", description: "Complete smile restored with premium custom-fabricated dentures.", href: "/our-services/oral-maxillofacial-surgery", type: "pair", aspectW: 375, aspectH: 531 },
     ],
   },
 ];
