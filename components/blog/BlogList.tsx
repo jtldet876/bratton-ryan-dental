@@ -1,37 +1,8 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-
-const posts = [
-  {
-    title: "Tried and True: Why Manual Toothbrushes Still Matter",
-    date: "November 7, 2018",
-    category: "Dental Hygiene",
-    excerpt: "Electric toothbrushes get all the buzz, but a quality manual brush used correctly is still one of the most effective tools for maintaining oral health. Here's what the science says.",
-    readTime: "3 min read",
-  },
-  {
-    title: "A Few Words About TMJ",
-    date: "March 23, 2018",
-    category: "TMJ",
-    excerpt: "Temporomandibular joint disorder affects millions of Americans, often causing jaw pain, headaches, and clicking sounds. Learn the signs, causes, and treatment options.",
-    readTime: "4 min read",
-  },
-  {
-    title: "Implant Restoration: What to Expect",
-    date: "December 8, 2017",
-    category: "Implants",
-    excerpt: "Dental implants are the gold standard for replacing missing teeth — but many patients aren't sure what the process involves. We walk you through every step.",
-    readTime: "5 min read",
-  },
-  {
-    title: "Just STOP When It Comes to Soda Pop",
-    date: "November 5, 2017",
-    category: "Dental Hygiene",
-    excerpt: "Even diet sodas are acidic enough to erode tooth enamel over time. We break down exactly what happens to your teeth with each sip — and better alternatives to reach for.",
-    readTime: "3 min read",
-  },
-];
+import Link from "next/link";
+import { blogPosts } from "@/lib/blog-data";
 
 export default function BlogList() {
   const ref = useRef(null);
@@ -41,13 +12,16 @@ export default function BlogList() {
     <section ref={ref} className="bg-cream py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {posts.map((post, i) => (
+          {blogPosts.map((post, i) => (
             <motion.article
-              key={post.title}
+              key={post.slug}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: i * 0.1 }}
-              className="group bg-soft-gray hover:bg-navy transition-colors duration-500 p-8 lg:p-10 flex flex-col"
+            >
+            <Link
+              href={`/blog/${post.slug}`}
+              className="group bg-soft-gray hover:bg-navy transition-colors duration-500 p-8 lg:p-10 flex flex-col h-full block"
             >
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-[10px] text-gold tracking-[0.3em] uppercase border border-gold/40 px-3 py-1">
@@ -74,6 +48,7 @@ export default function BlogList() {
                   </svg>
                 </span>
               </div>
+            </Link>
             </motion.article>
           ))}
         </div>
