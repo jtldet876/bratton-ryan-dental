@@ -74,9 +74,9 @@ const team = [
   {
     name: "Maitri",
     role: "Certified Dental Assistant",
-    image: "/images/Bratton4.jpg",
-    aspectW: 800,
-    aspectH: 600,
+    image: null,
+    aspectW: 0,
+    aspectH: 0,
     education: [
       "Dental schooling completed in India",
     ],
@@ -152,19 +152,21 @@ export default function TeamPage() {
             >
               {/* Photo col */}
               <div className={`lg:col-span-4 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div className="relative overflow-hidden bg-soft-gray"
-                  style={{ aspectRatio: `${member.aspectW} / ${member.aspectH}` }}
-                >
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                  />
-                </div>
+                {member.image && (
+                  <div className="relative overflow-hidden bg-soft-gray"
+                    style={{ aspectRatio: `${member.aspectW} / ${member.aspectH}` }}
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                    />
+                  </div>
+                )}
                 {/* Credential pills */}
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className={`flex flex-wrap gap-2 ${member.image ? "mt-6" : ""}`}>
                   {[...member.education, ...member.advanced].map((c) => (
                     <span
                       key={c}

@@ -26,13 +26,6 @@ const team = [
     bio: "Jennifer completed her Dental Assisting and Dental Hygiene education at Phoenix College with honors. She specializes in periodontal disease and dental implant care, and is dedicated to motivating patients of all ages toward a healthy smile that lasts a lifetime.",
     credentials: ["R.D.H.", "Periodontal & Implant Care"],
   },
-  {
-    name: "Maitri",
-    role: "Certified Dental Assistant",
-    image: "/images/Bratton4.jpg",
-    bio: "Originally from India, Maitri completed her dental schooling there before becoming a United States citizen in 2025. She joined Dr. Bratton's team in September 2025 and plans to continue her education to become a licensed dentist in the U.S.",
-    credentials: ["Certified Dental Assistant"],
-  },
 ];
 
 export default function TeamSection() {
@@ -104,7 +97,7 @@ export default function TeamSection() {
         </motion.div>
 
         {/* Individual cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {team.map((member, i) => (
             <motion.div
               key={member.name}

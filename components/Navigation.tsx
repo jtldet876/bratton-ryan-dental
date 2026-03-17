@@ -17,7 +17,7 @@ export default function Navigation() {
   const navLinks = [
     { label: "Services", href: "/our-services" },
     { label: "Smile Gallery", href: "/smile-gallery" },
-    { label: "Our Team", href: "/#team" },
+    { label: "Our Team", href: "/the-clinical-office-staff" },
     { label: "Patient Resources", href: "/patient-resources" },
     { label: "Blog", href: "/blog" },
   ];
