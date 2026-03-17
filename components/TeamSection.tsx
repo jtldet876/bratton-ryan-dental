@@ -7,24 +7,31 @@ import Image from "next/image";
 const team = [
   {
     name: "Dr. Ryan Bratton",
-    role: "Lead Dentist & Founder",
+    role: "Dentist & Founder",
     image: "/images/DrBratton.jpg",
-    bio: "With over 25 years of experience, Dr. Bratton brings unmatched expertise and a genuine passion for transforming smiles. His philosophy: exceptional care, every single time.",
-    credentials: ["D.D.S.", "25+ Years Experience", "Scottsdale Native"],
+    bio: "Native of Memphis, Tennessee and 1990 graduate of the University of Tennessee College of Dentistry. Post-graduate education includes extensive studies at The Pankey Institute (sixth level), The Dawson Center for Advanced Dental Studies, and The Schuster Center — with over 1,000 hours of continuing education.",
+    credentials: ["D.D.S.", "1,000+ Hours CE", "Pankey Institute — Level VI"],
   },
   {
     name: "Rachel",
-    role: "Office Manager",
+    role: "Office Manager & Certified Dental Assistant",
     image: "/images/Rachel.jpg",
-    bio: "Rachel ensures every patient experience is seamless from first call to final appointment. Her warmth and attention to detail set the tone for everything we do.",
-    credentials: ["Patient Experience Expert", "Insurance Specialist"],
+    bio: "Originally from Northern Michigan, Rachel earned her Dental Assisting Certification from Rio Salado Community College and her Bachelor's in Business Management from BYU-Idaho. She joined Dr. Bratton in 2016 and has served as office manager since 2017.",
+    credentials: ["Certified Dental Assistant", "B.S. Business Management"],
   },
   {
     name: "Jennifer",
-    role: "Dental Hygienist",
+    role: "Registered Dental Hygienist",
     image: "/images/Jennifer.jpg",
-    bio: "Jennifer's gentle touch and thorough approach to preventive care have earned her a loyal following of patients who credit her with transforming their oral health.",
-    credentials: ["R.D.H.", "Preventive Care Specialist"],
+    bio: "Jennifer completed her Dental Assisting and Dental Hygiene education at Phoenix College with honors. She specializes in periodontal disease and dental implant care, and is dedicated to motivating patients of all ages toward a healthy smile that lasts a lifetime.",
+    credentials: ["R.D.H.", "Periodontal & Implant Care"],
+  },
+  {
+    name: "Maitri",
+    role: "Certified Dental Assistant",
+    image: "/images/Bratton4.jpg",
+    bio: "Originally from India, Maitri completed her dental schooling there before becoming a United States citizen in 2025. She joined Dr. Bratton's team in September 2025 and plans to continue her education to become a licensed dentist in the U.S.",
+    credentials: ["Certified Dental Assistant"],
   },
 ];
 
@@ -97,7 +104,7 @@ export default function TeamSection() {
         </motion.div>
 
         {/* Individual cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, i) => (
             <motion.div
               key={member.name}
