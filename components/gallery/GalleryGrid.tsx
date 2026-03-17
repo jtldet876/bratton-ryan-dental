@@ -11,11 +11,14 @@ type GalleryCase = {
   description: string;
   href: string;
   // composite = single image with before(left) + after(right) already combined
-  // after = single result/after shot only
-  type: "composite" | "after";
+  // after    = single result/after shot only
+  // pair     = two separate images shown side by side (beforeSrc + src)
+  type: "composite" | "after" | "pair";
   // natural aspect ratio of the source image for correct display
   aspectW: number;
   aspectH: number;
+  // only used when type === "pair"
+  beforeSrc?: string;
 };
 
 type GalleryCategory = {
@@ -46,16 +49,11 @@ const galleryData: GalleryCategory[] = [
     label: "Porcelain Crowns",
     description: "Custom-crafted porcelain crowns that restore the strength, shape, and appearance of damaged or weakened teeth.",
     cases: [
-      { src: "/images/gallery/crown-1.jpg",  alt: "Crown before and after", treatment: "Crown Restoration",     description: "Damaged tooth fully restored with a custom-fit porcelain crown.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 275, aspectH: 142 },
-      { src: "/images/gallery/crown-2.jpg",  alt: "Crown before and after", treatment: "Crown Placement",       description: "Natural-looking crown matched precisely to surrounding teeth.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 275, aspectH: 124 },
-      { src: "/images/gallery/crown-3.jpg",  alt: "Crown before and after", treatment: "Smile Restoration",     description: "Worn teeth restored with durable all-ceramic crowns.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 269, aspectH: 157 },
-      { src: "/images/gallery/crown-4.jpg",  alt: "Crown before and after", treatment: "Full Crown Makeover",   description: "Multiple crowns placed to restore bite and aesthetics together.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 275, aspectH: 153 },
-      { src: "/images/gallery/crown-5.jpg",  alt: "Crown before and after", treatment: "Full Coverage Crown",   description: "Single crown protecting a heavily cracked molar.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 275, aspectH: 138 },
-      { src: "/images/gallery/crown-6.jpg",  alt: "Crown before and after", treatment: "Crown Replacement",     description: "Aging metal crown replaced with a modern all-ceramic restoration.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 275, aspectH: 138 },
-      { src: "/images/gallery/crown-7.jpg",  alt: "Crown before and after", treatment: "Posterior Crown",       description: "Back tooth protected and beautifully restored.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 258, aspectH: 145 },
-      { src: "/images/gallery/crown-8.jpg",  alt: "Crown before and after", treatment: "Aesthetic Crown",       description: "Front tooth crown crafted for perfect symmetry and color match.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 275, aspectH: 138 },
-      { src: "/images/gallery/crown-9.jpg",  alt: "Crown before and after", treatment: "Crown & Restoration",   description: "Comprehensive treatment restoring bite confidence.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 275, aspectH: 138 },
-      { src: "/images/gallery/crown-10.jpg", alt: "Crown before and after", treatment: "Porcelain Crown",       description: "Seamless crown indistinguishable from the natural tooth.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "composite", aspectW: 261, aspectH: 131 },
+      { beforeSrc: "/images/gallery/crown-case-1-before.jpg", src: "/images/gallery/crown-case-1-after.jpg", alt: "Porcelain crown before and after", treatment: "Crown Restoration",   description: "Damaged tooth fully restored with a custom-fit porcelain crown.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "pair", aspectW: 275, aspectH: 142 },
+      { beforeSrc: "/images/gallery/crown-case-2-before.jpg", src: "/images/gallery/crown-case-2-after.jpg", alt: "Porcelain crown before and after", treatment: "Crown Placement",     description: "Natural-looking crown matched precisely to surrounding teeth.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "pair", aspectW: 275, aspectH: 153 },
+      { beforeSrc: "/images/gallery/crown-case-3-before.jpg", src: "/images/gallery/crown-case-3-after.jpg", alt: "Porcelain crown before and after", treatment: "Smile Restoration",   description: "Worn teeth restored with durable all-ceramic crowns.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "pair", aspectW: 275, aspectH: 138 },
+      { beforeSrc: "/images/gallery/crown-case-4-before.jpg", src: "/images/gallery/crown-case-4-after.jpg", alt: "Porcelain crown before and after", treatment: "Full Crown Makeover", description: "Multiple crowns placed to restore bite and aesthetics together.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "pair", aspectW: 275, aspectH: 145 },
+      { beforeSrc: "/images/gallery/crown-case-5-before.jpg", src: "/images/gallery/crown-case-5-after.jpg", alt: "Porcelain crown before and after", treatment: "Porcelain Crown",     description: "Seamless crown indistinguishable from the natural tooth.", href: "/our-services/cosmetic-dentistry/porcelain-crowns-caps", type: "pair", aspectW: 275, aspectH: 138 },
     ],
   },
   {
@@ -63,10 +61,8 @@ const galleryData: GalleryCategory[] = [
     label: "Fixed Bridges",
     description: "Permanently fixed porcelain bridges that replace missing teeth and restore your natural bite — no removal required.",
     cases: [
-      { src: "/images/gallery/bridge-1.jpg", alt: "Bridge before and after", treatment: "Three-Unit Bridge",    description: "Missing tooth replaced with a natural-looking porcelain bridge.", href: "/our-services/cosmetic-dentistry/porcelain-fixed-bridges", type: "composite", aspectW: 275, aspectH: 154 },
-      { src: "/images/gallery/bridge-2.jpg", alt: "Bridge before and after", treatment: "Bridge Restoration",   description: "Gap closed with a custom bridge matched to adjacent teeth.", href: "/our-services/cosmetic-dentistry/porcelain-fixed-bridges", type: "composite", aspectW: 275, aspectH: 154 },
-      { src: "/images/gallery/bridge-3.jpg", alt: "Bridge before and after", treatment: "Anterior Bridge",      description: "Front-tooth bridge restoring a natural, complete smile.", href: "/our-services/cosmetic-dentistry/porcelain-fixed-bridges", type: "composite", aspectW: 275, aspectH: 154 },
-      { src: "/images/gallery/bridge-4.jpg", alt: "Bridge before and after", treatment: "Full Bridge Placement", description: "Multiple missing teeth replaced with a seamless fixed bridge.", href: "/our-services/cosmetic-dentistry/porcelain-fixed-bridges", type: "composite", aspectW: 275, aspectH: 154 },
+      { beforeSrc: "/images/gallery/bridge-case-1-before.jpg", src: "/images/gallery/bridge-case-1-after.jpg", alt: "Porcelain bridge before and after", treatment: "Three-Unit Bridge",    description: "Missing tooth replaced with a natural-looking porcelain bridge.", href: "/our-services/cosmetic-dentistry/porcelain-fixed-bridges", type: "pair", aspectW: 275, aspectH: 154 },
+      { beforeSrc: "/images/gallery/bridge-case-2-before.jpg", src: "/images/gallery/bridge-case-2-after.jpg", alt: "Porcelain bridge before and after", treatment: "Bridge Restoration",   description: "Gap closed with a custom bridge matched to adjacent teeth.", href: "/our-services/cosmetic-dentistry/porcelain-fixed-bridges", type: "pair", aspectW: 275, aspectH: 154 },
     ],
   },
   {
@@ -124,6 +120,72 @@ function CompositeCard({ item, index }: { item: GalleryCase; index: number }) {
         <Link
           href={item.href}
           className="flex-shrink-0 text-gold text-[10px] tracking-widest uppercase flex items-center gap-1.5 mt-1 hover:gap-2.5 transition-all duration-300 group/link"
+        >
+          Details
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </Link>
+      </div>
+    </motion.div>
+  );
+}
+
+// ─── Separate Before + After side-by-side card ───────────────────────────────
+function PairCard({ item, index }: { item: GalleryCase; index: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.07 }}
+      className="bg-white border border-warm-text/10 overflow-hidden group hover:shadow-xl transition-shadow duration-500"
+    >
+      {/* Two images side by side */}
+      <div className="grid grid-cols-2 divide-x divide-white/60">
+        {/* Before */}
+        <div
+          className="relative overflow-hidden bg-soft-gray"
+          style={{ aspectRatio: `${item.aspectW} / ${item.aspectH}` }}
+        >
+          <Image
+            src={item.beforeSrc!}
+            alt={`${item.alt} — before`}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 290px"
+          />
+          <div className="absolute bottom-0 left-0 z-20 bg-warm-text/80 px-3 py-1.5">
+            <span className="text-white text-[10px] tracking-[0.25em] uppercase font-medium">Before</span>
+          </div>
+        </div>
+
+        {/* After */}
+        <div
+          className="relative overflow-hidden bg-soft-gray"
+          style={{ aspectRatio: `${item.aspectW} / ${item.aspectH}` }}
+        >
+          <Image
+            src={item.src}
+            alt={`${item.alt} — after`}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 290px"
+          />
+          <div className="absolute bottom-0 right-0 z-20 bg-gold px-3 py-1.5">
+            <span className="text-navy text-[10px] tracking-[0.25em] uppercase font-medium">After</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Card footer */}
+      <div className="px-5 py-4 flex items-start justify-between gap-4">
+        <div>
+          <p className="font-serif text-warm-text text-base mb-0.5">{item.treatment}</p>
+          <p className="text-muted-text text-xs font-light leading-snug">{item.description}</p>
+        </div>
+        <Link
+          href={item.href}
+          className="flex-shrink-0 text-gold text-[10px] tracking-widest uppercase flex items-center gap-1.5 mt-1 hover:gap-2.5 transition-all duration-300"
         >
           Details
           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -249,7 +311,7 @@ export default function GalleryGrid() {
             className="space-y-20"
           >
             {visibleCategories.map((category, catIdx) => {
-              const composites = category.cases.filter((c) => c.type === "composite");
+              const composites = category.cases.filter((c) => c.type === "composite" || c.type === "pair");
               const afters = category.cases.filter((c) => c.type === "after");
 
               return (
@@ -286,9 +348,13 @@ export default function GalleryGrid() {
                         </p>
                       )}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-                        {composites.map((item, i) => (
-                          <CompositeCard key={item.src} item={item} index={i} />
-                        ))}
+                        {composites.map((item, i) =>
+                          item.type === "pair" ? (
+                            <PairCard key={item.src} item={item} index={i} />
+                          ) : (
+                            <CompositeCard key={item.src} item={item} index={i} />
+                          )
+                        )}
                       </div>
                     </>
                   )}
